@@ -1,6 +1,6 @@
 export default function Nav() {
   return (
-    <header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4 ">
+    <header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4">
       <nav
         className="max-w-[75rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between"
         aria-label="Global"
@@ -13,7 +13,7 @@ export default function Nav() {
             <img
               src="/Assets/Logo.svg"
               alt="Hassan's Logo"
-              className="h-36 w-52"
+              className="h-40 w-64"
             />
           </a>
           <div className="sm:hidden">
