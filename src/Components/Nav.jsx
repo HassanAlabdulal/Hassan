@@ -1,4 +1,8 @@
+import { useState } from "react";
+
 export default function Nav() {
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
+
   return (
     <header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4">
       <nav
@@ -16,19 +20,26 @@ export default function Nav() {
               className="h-40 w-64"
             />
           </a>
-          <div className="sm:hidden">
-            <button
-              type="button"
-              className="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none "
-              data-hs-collapse="/navbar-image-and-text-1"
-              aria-controls="navbar-image-and-text-1"
-              aria-label="Toggle navigation"
-            ></button>
-          </div>
+          <button
+            type="button"
+            className="sm:hidden"
+            aria-label="Toggle navigation"
+            onClick={() => setIsNavExpanded(!isNavExpanded)}
+          >
+            {/* Hamburger Icon */}
+            <div className="flex flex-col space-y-1">
+              <span className="block w-8 h-0.5 bg-gray-700"></span>
+              <span className="block w-8 h-0.5 bg-gray-700"></span>
+              <span className="block w-8 h-0.5 bg-gray-700"></span>
+            </div>
+          </button>
         </div>
+
+        {/* Navigation Links */}
         <div
-          id="navbar-image-and-text-1"
-          className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block"
+          className={`${
+            isNavExpanded ? "block" : "hidden"
+          } md:block overflow-hidden z-50 transition-all duration-300`}
         >
           <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
             <a
@@ -45,13 +56,13 @@ export default function Nav() {
               SERVICES
             </a>
             <a
-              className="font-medium text-gray-700 hover:text-blue-700 "
+              className="font-medium text-gray-700 hover:text-blue-700"
               href="/"
             >
               PROJECTS
             </a>
             <a
-              className="font-medium text-gray-700 hover:text-blue-700 "
+              className="font-medium text-gray-700 hover:text-blue-700"
               href="/"
             >
               CONTACT
