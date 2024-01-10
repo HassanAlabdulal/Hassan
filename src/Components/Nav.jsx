@@ -16,7 +16,7 @@ export default function Nav() {
   };
 
   return (
-    <header className="relative flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4">
+    <header className="relative flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm">
       <nav
         className="max-w-[75rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between"
         aria-label="Global"
@@ -71,26 +71,25 @@ export default function Nav() {
           </button>
         </div>
 
-        {/* Navigation Links */}
         {/* Navigation Links for large screens */}
         <div className="hidden sm:flex">
-          <a className="font-medium text-blue-700 mx-2" href="/">
+          <a className="font-medium text-blue-700 mx-3" href="/">
             HOME
           </a>
           <a
-            className="font-medium text-gray-700 mx-2 hover:text-blue-700"
+            className="font-medium text-gray-700 mx-3 hover:text-blue-700"
             href="/"
           >
             SERVICES
           </a>
           <a
-            className="font-medium text-gray-700 mx-2 hover:text-blue-700"
+            className="font-medium text-gray-700 mx-3 hover:text-blue-700"
             href="/"
           >
             PROJECTS
           </a>
           <a
-            className="font-medium text-gray-700 mx-2 hover:text-blue-700"
+            className="font-medium text-gray-700 mx-3 hover:text-blue-700"
             href="/"
           >
             CONTACT
