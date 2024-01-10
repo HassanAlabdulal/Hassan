@@ -18,7 +18,7 @@ export default function Nav() {
 
   const underlineVariants = {
     hidden: { width: 0 },
-    visible: { width: "100%", transition: { duration: 0.3 } },
+    visible: { width: "75%", transition: { duration: 0.3 } },
   };
 
   return (
@@ -82,7 +82,7 @@ export default function Nav() {
           {["HOME", "EXPERIENCE", "PROJECTS", "CONTACT"].map((item) => (
             <a
               key={item}
-              className="font-medium text-gray-800 mx-3  relative"
+              className="font-medium text-gray-800 mx-3 relative"
               href={`/${item.toLowerCase()}`}
               onMouseEnter={() => setActiveLink(item)}
               onMouseLeave={() => setActiveLink("")}
@@ -90,7 +90,7 @@ export default function Nav() {
             >
               {item}
               <motion.span
-                className="absolute -bottom-2 left-0 bg-black h-0.5 w-5/6 mt-3"
+                className="absolute -bottom-2 left-[0.4rem] transform -translate-x-1/2 bg-black h-0.5"
                 variants={underlineVariants}
                 initial="hidden"
                 animate={activeLink === item ? "visible" : "hidden"}
