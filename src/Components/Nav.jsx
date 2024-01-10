@@ -22,20 +22,20 @@ export default function Nav() {
   };
 
   return (
-    <header className="relative flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm">
+    <header className="relative z-50 flex flex-wrap w-full text-sm bg-white sm:justify-start sm:flex-nowrap">
       <nav
         className="max-w-[75rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between"
         aria-label="Global"
       >
         <div className="flex items-center justify-between">
           <a
-            className="inline-flex items-center gap-x-2 text-xl font-semibold "
+            className="inline-flex items-center text-xl font-semibold gap-x-2 "
             href="/"
           >
             <img
               src="/Assets/Logo.svg"
               alt="Hassan's Logo"
-              className="h-40 w-64 max-md:w-32 max-md:h-32"
+              className="w-64 h-40 max-md:w-32 max-md:h-32"
             />
           </a>
           <button
@@ -78,11 +78,11 @@ export default function Nav() {
         </div>
 
         {/* Navigation Links for large screens */}
-        <div className="hidden sm:flex relative">
+        <div className="relative hidden sm:flex">
           {["HOME", "EXPERIENCE", "PROJECTS", "CONTACT"].map((item) => (
             <a
               key={item}
-              className="font-medium text-gray-800 mx-3 relative"
+              className="relative mx-3 font-medium text-gray-800 transition-all duration-200 delay-50 hover:text-black hover:font-bold"
               href={`/${item.toLowerCase()}`}
               onMouseEnter={() => setActiveLink(item)}
               onMouseLeave={() => setActiveLink("")}
@@ -90,7 +90,7 @@ export default function Nav() {
             >
               {item}
               <motion.span
-                className="absolute -bottom-2 left-0 items-center  bg-black h-0.5"
+                className="absolute -bottom-2 left-0 items-center bg-black h-0.5"
                 variants={underlineVariants}
                 initial="hidden"
                 animate={activeLink === item ? "visible" : "hidden"}
@@ -107,25 +107,25 @@ export default function Nav() {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              className="fixed left-0 z-40 flex flex-col items-center justify-center w-full gap-6 text-xl pb-7 font-bold text-center shadow-md"
+              className="fixed left-0 z-40 flex flex-col items-center justify-center w-full gap-6 text-xl font-bold text-center shadow-md pb-7"
             >
-              <a className="font-medium text-blue-700 my-2" href="/">
+              <a className="my-2 font-medium text-blue-700" href="/">
                 HOME
               </a>
               <a
-                className="font-medium text-gray-700 my-2 hover:text-blue-700"
+                className="my-2 font-medium text-gray-700 hover:text-blue-700"
                 href="/"
               >
                 SERVICES
               </a>
               <a
-                className="font-medium text-gray-700 my-2 hover:text-blue-700"
+                className="my-2 font-medium text-gray-700 hover:text-blue-700"
                 href="/"
               >
                 PROJECTS
               </a>
               <a
-                className="font-medium text-gray-700 my-2 hover:text-blue-700"
+                className="my-2 font-medium text-gray-700 hover:text-blue-700"
                 href="/"
               >
                 CONTACT
