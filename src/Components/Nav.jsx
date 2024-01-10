@@ -23,31 +23,7 @@ export default function Nav() {
               data-hs-collapse="/navbar-image-and-text-1"
               aria-controls="navbar-image-and-text-1"
               aria-label="Toggle navigation"
-            >
-              <svg
-                className="hs-collapse-open:hidden flex-shrink-0 w-4 h-4"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <line x1="3" x2="21" y1="6" y2="6" />
-                <line x1="3" x2="21" y1="12" y2="12" />
-                <line x1="3" x2="21" y1="18" y2="18" />
-              </svg>
-              <svg
-                className="hs-collapse-open:block hidden flex-shrink-0 w-4 h-4"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path d="M18 6 6 18" />
-                <path d="m6 6 12 12" />
-              </svg>
-            </button>
+            ></button>
           </div>
         </div>
         <div
@@ -55,23 +31,27 @@ export default function Nav() {
           className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block"
         >
           <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
-            <a className="font-medium text-black " href="/" aria-current="page">
+            <a
+              className="font-medium text-blue-700"
+              href="/"
+              aria-current="page"
+            >
               HOME
             </a>
             <a
-              className="font-medium text-gray-600 hover:text-gray-400 "
+              className="font-medium text-gray-700 hover:text-blue-700"
               href="/"
             >
               SERVICES
             </a>
             <a
-              className="font-medium text-gray-600 hover:text-gray-400 "
+              className="font-medium text-gray-700 hover:text-blue-700 "
               href="/"
             >
               PROJECTS
             </a>
             <a
-              className="font-medium text-gray-600 hover:text-gray-400 "
+              className="font-medium text-gray-700 hover:text-blue-700 "
               href="/"
             >
               CONTACT
