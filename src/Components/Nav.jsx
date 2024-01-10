@@ -1,10 +1,8 @@
-// import Logo from "../../Assets/Logo.png";
-
 export default function Nav() {
   return (
     <header className="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4 ">
       <nav
-        className="max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between"
+        className="max-w-[75rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between"
         aria-label="Global"
       >
         <div className="flex items-center justify-between">
@@ -57,30 +55,26 @@ export default function Nav() {
           className="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block"
         >
           <div className="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
-            <a
-              className="font-medium text-blue-500 "
-              href="/"
-              aria-current="page"
-            >
-              Landing
+            <a className="font-medium text-black " href="/" aria-current="page">
+              HOME
             </a>
             <a
               className="font-medium text-gray-600 hover:text-gray-400 "
               href="/"
             >
-              Account
+              SERVICES
             </a>
             <a
               className="font-medium text-gray-600 hover:text-gray-400 "
               href="/"
             >
-              Work
+              PROJECTS
             </a>
             <a
               className="font-medium text-gray-600 hover:text-gray-400 "
               href="/"
             >
-              Blog
+              CONTACT
             </a>
           </div>
         </div>
