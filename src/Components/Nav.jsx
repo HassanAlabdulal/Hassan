@@ -6,33 +6,19 @@ export default function Nav() {
 
   // Variants for Framer Motion animation
   const navVariants = {
-    hidden: { opacity: 0, scale: 0.95, display: "none" },
+    hidden: { opacity: 0, scale: 0.95, y: "-100%" },
     visible: {
       opacity: 1,
       scale: 1,
-      display: "block",
+      y: 0,
       transition: { duration: 0.2 },
-    },
-  };
-
-  const navMotion = {
-    visible: {
-      opacity: 1,
-
-      transition: {
-        when: "beforeChildren",
-        staggerChildren: 0.15,
-      },
-    },
-    hidden: {
-      opacity: 0,
     },
   };
 
   return (
     <header className="relative flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white text-sm py-4">
       <nav
-        className="max-w-[75rem] w-full mx-auto px-4 max-md:mr-6 sm:flex sm:items-center sm:justify-between"
+        className="max-w-[75rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between"
         aria-label="Global"
       >
         <div className="flex items-center justify-between">
@@ -58,7 +44,7 @@ export default function Nav() {
               initial={{ opacity: 0, x: 25 }}
               transition={{ delay: 0.35 }}
               onClick={() => setIsNavExpanded((prevToggle) => !prevToggle)}
-              className={`burger  cursor-pointer space-y-1.5 xl:hidden lg:hidden
+              className={`burger  cursor-pointer space-y-1.5 xl:hidden lg:hidden mr-5
         `}
             >
               <motion.span
@@ -86,42 +72,62 @@ export default function Nav() {
         </div>
 
         {/* Navigation Links */}
+        {/* Navigation Links for large screens */}
+        <div className="hidden sm:flex">
+          <a className="font-medium text-blue-700 mx-2" href="/">
+            HOME
+          </a>
+          <a
+            className="font-medium text-gray-700 mx-2 hover:text-blue-700"
+            href="/"
+          >
+            SERVICES
+          </a>
+          <a
+            className="font-medium text-gray-700 mx-2 hover:text-blue-700"
+            href="/"
+          >
+            PROJECTS
+          </a>
+          <a
+            className="font-medium text-gray-700 mx-2 hover:text-blue-700"
+            href="/"
+          >
+            CONTACT
+          </a>
+        </div>
+
+        {/* Navigation Links for small screens */}
         <AnimatePresence>
           {isNavExpanded && (
             <motion.div
-              variants={navMotion}
-              animate="visible"
+              variants={navVariants}
               initial="hidden"
-              className="fixed left-0 z-40 flex flex-col items-center justify-center w-full gap-24 text-2xl font-bold text-center"
+              animate="visible"
+              exit="hidden"
+              className="fixed left-0 z-40 flex flex-col items-center justify-center w-full gap-6 text-xl pb-7 font-bold text-center shadow-md"
             >
-              <motion.div
-                animate={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: -55 }}
-                transition={{ delay: 0.25 }}
-                className="flex flex-col items-center shadow-md w-full pb-7"
+              <a className="font-medium text-blue-700 my-2" href="/">
+                HOME
+              </a>
+              <a
+                className="font-medium text-gray-700 my-2 hover:text-blue-700"
+                href="/"
               >
-                <a className="font-medium text-blue-700 my-2" href="/">
-                  HOME
-                </a>
-                <a
-                  className="font-medium text-gray-700 my-2 hover:text-blue-700"
-                  href="/"
-                >
-                  SERVICES
-                </a>
-                <a
-                  className="font-medium text-gray-700 my-2 hover:text-blue-700"
-                  href="/"
-                >
-                  PROJECTS
-                </a>
-                <a
-                  className="font-medium text-gray-700 my-2 hover:text-blue-700"
-                  href="/"
-                >
-                  CONTACT
-                </a>
-              </motion.div>
+                SERVICES
+              </a>
+              <a
+                className="font-medium text-gray-700 my-2 hover:text-blue-700"
+                href="/"
+              >
+                PROJECTS
+              </a>
+              <a
+                className="font-medium text-gray-700 my-2 hover:text-blue-700"
+                href="/"
+              >
+                CONTACT
+              </a>
             </motion.div>
           )}
         </AnimatePresence>
