@@ -18,7 +18,7 @@ export default function Nav() {
 
   const underlineVariants = {
     hidden: { width: 0 },
-    visible: { width: "75%", transition: { duration: 0.3 } },
+    visible: { width: "100%", transition: { duration: 0.3 } },
   };
 
   return (
@@ -50,7 +50,7 @@ export default function Nav() {
               initial={{ opacity: 0, x: 25 }}
               transition={{ delay: 0.35 }}
               onClick={() => setIsNavExpanded((prevToggle) => !prevToggle)}
-              className={`burger  cursor-pointer space-y-1.5 xl:hidden lg:hidden mr-5
+              className={`burger cursor-pointer space-y-1.5 xl:hidden lg:hidden mr-5
         `}
             >
               <motion.span
@@ -58,20 +58,20 @@ export default function Nav() {
                   rotateZ: isNavExpanded ? 45 : 0,
                   y: isNavExpanded ? 8 : 0,
                 }}
-                className="line-1 block h-0.5 w-8 bg-[#121212]"
+                className=" block h-0.5 w-8 bg-[#121212]"
               ></motion.span>
 
               <motion.span
-                animate={{ width: isNavExpanded ? 0 : 24 }}
-                className="line-2 block h-0.5 w-6 bg-[#121212]"
+                animate={{ width: isNavExpanded ? 0 : 32 }}
+                className=" block h-0.5 w-6 bg-[#121212]"
               ></motion.span>
               <motion.span
                 animate={{
                   rotateZ: isNavExpanded ? -45 : 0,
                   y: isNavExpanded ? -8 : 0,
-                  width: isNavExpanded ? 32 : 24,
+                  width: isNavExpanded ? 32 : 32,
                 }}
-                className="line-3 block h-0.5 w-4 bg-[#121212]"
+                className=" block h-0.5 w-4 bg-[#121212]"
               ></motion.span>
             </motion.div>
           </button>
@@ -90,7 +90,7 @@ export default function Nav() {
             >
               {item}
               <motion.span
-                className="absolute -bottom-2 left-[0.4rem] transform -translate-x-1/2 bg-black h-0.5"
+                className="absolute -bottom-2 left-0 items-center  bg-black h-0.5"
                 variants={underlineVariants}
                 initial="hidden"
                 animate={activeLink === item ? "visible" : "hidden"}
