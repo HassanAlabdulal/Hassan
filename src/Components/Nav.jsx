@@ -50,13 +50,13 @@ export default function Nav() {
               initial={{ opacity: 0, x: 25 }}
               transition={{ delay: 0.35 }}
               onClick={() => setIsNavExpanded((prevToggle) => !prevToggle)}
-              className={`burger cursor-pointer space-y-1.5 xl:hidden lg:hidden mr-5
+              className={`burger cursor-pointer space-y-2.5 xl:hidden lg:hidden mr-5
         `}
             >
               <motion.span
                 animate={{
                   rotateZ: isNavExpanded ? 45 : 0,
-                  y: isNavExpanded ? 8 : 0,
+                  y: isNavExpanded ? 12 : 0,
                 }}
                 className=" block h-0.5 w-8 bg-[#121212]"
               ></motion.span>
@@ -68,7 +68,7 @@ export default function Nav() {
               <motion.span
                 animate={{
                   rotateZ: isNavExpanded ? -45 : 0,
-                  y: isNavExpanded ? -8 : 0,
+                  y: isNavExpanded ? -12 : 0,
                   width: isNavExpanded ? 32 : 32,
                 }}
                 className=" block h-0.5 w-4 bg-[#121212]"
