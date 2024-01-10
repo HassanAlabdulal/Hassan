@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function Nav() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
+  const [activeLink, setActiveLink] = useState("");
 
   // Variants for Framer Motion animation
   const navVariants = {
@@ -13,6 +14,11 @@ export default function Nav() {
       y: 0,
       transition: { duration: 0.2 },
     },
+  };
+
+  const underlineVariants = {
+    hidden: { width: 0 },
+    visible: { width: "100%", transition: { duration: 0.3 } },
   };
 
   return (
@@ -72,28 +78,25 @@ export default function Nav() {
         </div>
 
         {/* Navigation Links for large screens */}
-        <div className="hidden sm:flex">
-          <a className="font-medium text-blue-700 mx-3" href="/">
-            HOME
-          </a>
-          <a
-            className="font-medium text-gray-700 mx-3 hover:text-blue-700"
-            href="/"
-          >
-            SERVICES
-          </a>
-          <a
-            className="font-medium text-gray-700 mx-3 hover:text-blue-700"
-            href="/"
-          >
-            PROJECTS
-          </a>
-          <a
-            className="font-medium text-gray-700 mx-3 hover:text-blue-700"
-            href="/"
-          >
-            CONTACT
-          </a>
+        <div className="hidden sm:flex relative">
+          {["HOME", "EXPERIENCE", "PROJECTS", "CONTACT"].map((item) => (
+            <a
+              key={item}
+              className="font-medium text-gray-800 mx-3  relative"
+              href={`/${item.toLowerCase()}`}
+              onMouseEnter={() => setActiveLink(item)}
+              onMouseLeave={() => setActiveLink("")}
+              onClick={() => setActiveLink(item)}
+            >
+              {item}
+              <motion.span
+                className="absolute -bottom-2 left-0 bg-black h-0.5 w-5/6 mt-3"
+                variants={underlineVariants}
+                initial="hidden"
+                animate={activeLink === item ? "visible" : "hidden"}
+              />
+            </a>
+          ))}
         </div>
 
         {/* Navigation Links for small screens */}
