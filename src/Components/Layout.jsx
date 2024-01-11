@@ -1,11 +1,10 @@
-import Home from "../Pages/Home";
 import Nav from "./Nav";
 
-export default function Layout() {
+export default function Layout(props) {
   return (
     <div>
       <Nav />
-      <Home />
+      <main>{props.children}</main>
     </div>
   );
 }
