@@ -16,7 +16,7 @@ export default function Home() {
         <div>
           <h1 className="text-4xl font-semibold leading-tight tracking-wider text-center text-black font-nunito ">
             {text}
-            <span className="text-red">
+            <span>
               <Cursor cursorColor="red" />
             </span>
           </h1>

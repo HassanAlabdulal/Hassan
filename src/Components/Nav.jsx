@@ -78,7 +78,7 @@ export default function Nav() {
         </div>
 
         {/* Navigation Links for large screens */}
-        <div className="relative hidden sm:flex">
+        <div className="relative hidden text-lg sm:flex font-nunito">
           {["HOME", "EXPERIENCE", "PROJECTS", "CONTACT"].map((item) => (
             <a
               key={item}
