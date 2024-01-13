@@ -7,14 +7,14 @@ export default function Home() {
   });
 
   return (
-    <section className="flex items-center justify-between max-h-screen pt-24 px-96 bg-[#0d0a0a]">
-      <div className="flex flex-col w-1/2">
-        <h1 className="mb-12 text-6xl font-bold leading-tight tracking-wider text-center text-[#e11d48] font-nunito ">
+    <section className="flex items-center md:justify-between justify-center flex-col md:flex-row max-h-screen pt-24 md:px-96 bg-[#0d0a0a]">
+      <div className="flex flex-col w-5/6 md:w-1/2">
+        <h1 className="md:mb-12 mb-8 md:text-6xl text-4xl font-bold leading-tight tracking-wider text-center text-[#e11d48] font-nunito ">
           Hassan <br /> Alabdulal
         </h1>
 
         <div>
-          <h1 className="text-4xl font-semibold leading-tight tracking-wider text-center text-[#fafaf9] font-nunito ">
+          <h1 className="md:text-4xl text-2xl w-full font-semibold leading-tight tracking-wider text-center text-[#fafaf9] font-nunito ">
             {text}
             <span>
               <Cursor cursorColor="#fafaf9" />
@@ -24,12 +24,12 @@ export default function Home() {
       </div>
 
       {
-        <div className="w-1/2">
+        <div className="w-5/6 md:w-1/2">
           <Player
+            className="md:w-[500px] md:h-[500px]"
             src="./Assets/Animations/Developer-Animation.json"
             background="transparent"
             speed="1"
-            style={{ width: "500px", height: "500px" }}
             loop
             autoplay
           />

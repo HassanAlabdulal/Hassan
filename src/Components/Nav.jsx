@@ -24,7 +24,7 @@ export default function Nav() {
   return (
     <header className="relative z-50 flex flex-wrap w-full text-sm bg-[#0d0a0a] sm:justify-start sm:flex-nowrap">
       <nav
-        className="max-w-[75rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between"
+        className="md:max-w-[75rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between"
         aria-label="Global"
       >
         <div className="flex items-center justify-between">
