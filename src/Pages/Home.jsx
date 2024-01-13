@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <section className="flex items-center md:justify-between justify-center flex-col md:flex-row max-h-screen md:pt-20 pt-16 md:px-96 bg-[#0d0a0a]">
-      <div className="flex flex-col w-5/6 md:w-1/2">
+      <div className="flex flex-col w-full md:w-1/2">
         <h1 className="md:mb-12 mb-8 md:text-6xl text-4xl font-bold leading-tight tracking-wider text-center text-[#e11d48] font-nunito ">
           Hassan <br /> Alabdulal
         </h1>
@@ -24,7 +24,7 @@ export default function Home() {
       </div>
 
       {
-        <div className="w-5/6 mt-8 md:w-1/2">
+        <div className="w-full mt-8 md:w-1/2">
           <Player
             className="md:w-[500px] md:h-[500px]"
             src="./Assets/Animations/Developer-Animation.json"
