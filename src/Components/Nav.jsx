@@ -82,7 +82,8 @@ export default function Nav() {
           {["HOME", "EXPERIENCE", "PROJECTS", "CONTACT"].map((item) => (
             <a
               key={item}
-              className="relative mx-3 font-medium text-gray-800 transition-all duration-200 delay-50 hover:text-black hover:font-bold"
+              className="relative mx-3 font-medium text-[#008080] transition-all duration-200 delay-50 hover:text-#007373
+ hover:font-bold"
               href={`/${item.toLowerCase()}`}
               onMouseEnter={() => setActiveLink(item)}
               onMouseLeave={() => setActiveLink("")}
@@ -109,23 +110,26 @@ export default function Nav() {
               exit="hidden"
               className="fixed left-0 z-40 flex flex-col items-center justify-center w-full gap-6 text-xl font-bold text-center shadow-md pb-7"
             >
-              <a className="my-2 font-medium text-blue-700" href="/">
+              <a className="my-2 font-medium text-[#008080]" href="/">
                 HOME
               </a>
               <a
-                className="my-2 font-medium text-gray-700 hover:text-blue-700"
+                className="my-2 font-medium text-[#008080] hover:text-#007373
+"
                 href="/"
               >
                 SERVICES
               </a>
               <a
-                className="my-2 font-medium text-gray-700 hover:text-blue-700"
+                className="my-2 font-medium text-[#008080] hover:text-#007373
+"
                 href="/"
               >
                 PROJECTS
               </a>
               <a
-                className="my-2 font-medium text-gray-700 hover:text-blue-700"
+                className="my-2 font-medium text-[#008080] hover:text-#007373
+"
                 href="/"
               >
                 CONTACT
