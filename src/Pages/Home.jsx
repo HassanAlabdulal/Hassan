@@ -24,7 +24,7 @@ export default function Home() {
       </div>
 
       {
-        <div className="w-full mt-8 md:w-1/2">
+        <div className="w-full mt-6 md:w-1/2">
           <Player
             className="md:w-[500px] md:h-[500px]"
             src="./Assets/Animations/Developer-Animation.json"
