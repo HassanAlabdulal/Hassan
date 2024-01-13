@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <section className="flex items-center justify-between max-h-screen pt-24 px-96 bg-[#0d0a0a]">
       <div className="flex flex-col w-1/2">
-        <h1 className="mb-12 text-6xl font-bold leading-tight tracking-wider text-center text-[#008080] font-nunito ">
+        <h1 className="mb-12 text-6xl font-bold leading-tight tracking-wider text-center text-[#e11d48] font-nunito ">
           Hassan <br /> Alabdulal
         </h1>
 
